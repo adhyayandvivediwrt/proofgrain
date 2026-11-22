@@ -1,0 +1,17 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #f6f3ea; color: #2b2a26; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 10px 18px; background: #2f5d3a; color: #fff; }
+header h1 { margin: 0; font-size: 20px; }
+.card { background: #fff; border-radius: 10px; margin: 14px auto; padding: 16px; max-width: 980px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+h2 { margin: 0 0 10px; font-size: 17px; } h3 { font-size: 15px; }
+input, select, button { font: inherit; padding: 8px 10px; border-radius: 6px; border: 1px solid #ccc; margin: 3px 2px; }
+button { background: #2f5d3a; color: #fff; border: 0; cursor: pointer; }
+button.ghost { background: #fff; color: #2f5d3a; border: 1px solid #2f5d3a; }
+header button.ghost { background: transparent; color: #fff; border-color: #fff; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+td, th { padding: 6px; border-bottom: 1px solid #eee; text-align: left; }
+.grade { font-size: 46px; font-weight: 800; width: 90px; height: 90px; border-radius: 50%; display: grid; place-items: center; color: #fff; }
+.gA { background: #2e8b57; } .gB { background: #c9a227; } .gC { background: #d2691e; } .gB_ , .gBe { background: #a33; }
+#result img { max-width: 100%; border-radius: 8px; margin-top: 8px; }
+.hint { color: #666; font-size: 14px; } .warn { color: #a65b00; } .hash { color: #888; font-family: monospace; font-size: 12px; }
+.row { padding: 6px 0; border-bottom: 1px dashed #ddd; }

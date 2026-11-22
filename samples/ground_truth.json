@@ -1,0 +1,37 @@
+{
+  "rice_sample": {
+    "crop": "rice",
+    "whole": 131,
+    "broken": 6,
+    "discoloured": 0,
+    "foreign": 0
+  },
+  "rice_gradeB": {
+    "crop": "rice",
+    "whole": 123,
+    "broken": 18,
+    "discoloured": 5,
+    "foreign": 1
+  },
+  "rice_poor": {
+    "crop": "rice",
+    "whole": 91,
+    "broken": 48,
+    "discoloured": 16,
+    "foreign": 4
+  },
+  "wheat_sample": {
+    "crop": "wheat",
+    "whole": 155,
+    "broken": 3,
+    "discoloured": 2,
+    "foreign": 0
+  },
+  "wheat_gradeC": {
+    "crop": "wheat",
+    "whole": 141,
+    "broken": 13,
+    "discoloured": 6,
+    "foreign": 2
+  }
+}

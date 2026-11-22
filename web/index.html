@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proofgrain</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1>🌾 Proofgrain</h1>
+  <div>
+    <select id="lang"><option value="en">English</option><option value="hi">हिन्दी</option><option value="mr">मराठी</option></select>
+    <span id="who"></span> <button id="logout" class="ghost" hidden data-t="logout">Log out</button>
+  </div>
+</header>
+
+<section id="login" class="card">
+  <h2 data-t="join">Join Proofgrain</h2>
+  <input id="name" data-tp="your_name" placeholder="Your name">
+  <input id="village" data-tp="village" placeholder="Village / mandi">
+  <select id="role">
+    <option value="farmer" data-t="farmer">Farmer</option>
+    <option value="buyer" data-t="buyer">Buyer</option>
+    <option value="assessor" data-t="assessor">Assessor</option>
+  </select>
+  <button id="register" data-t="start">Start</button>
+</section>
+
+<section id="farmer" class="view" hidden>
+  <div class="card">
+    <h2 data-t="new_batch">New batch</h2>
+    <select id="crop"><option value="rice" data-t="rice">Rice</option><option value="wheat" data-t="wheat">Wheat</option></select>
+    <input id="weight" type="number" value="500" min="1"> <span>kg</span>
+    <button id="createBatch" data-t="create">Create</button>
+  </div>
+  <div class="card">
+    <h2 data-t="my_batches">My batches</h2>
+    <table><thead><tr><th>#</th><th data-t="crop">Crop</th><th>kg</th><th data-t="grade">Grade</th><th>Status</th><th></th></tr></thead>
+      <tbody id="batches"></tbody></table>
+  </div>
+  <div class="card" id="gradeCard" hidden>
+    <h2><span data-t="grade_batch">Grade batch</span> #<span id="gBatch"></span></h2>
+    <p class="hint" data-t="photo_hint">Spread 100+ grains on the blue mat, place the colour card in the top-left box, take a photo from above.</p>
+    <input type="file" id="photo" accept="image/*" capture="environment">
+    <button id="sampleBtn" class="ghost" data-t="use_sample">Use a sample photo</button>
+    <div id="result"></div>
+  </div>
+</section>
+
+<section id="buyer" class="view" hidden>
+  <div class="card">
+    <h2 data-t="market">Market</h2>
+    <table><thead><tr><th>#</th><th data-t="crop">Crop</th><th data-t="grade">Grade</th><th>kg</th><th>Broken %</th><th>Ask ₹/qtl</th><th>Best bid</th><th></th></tr></thead>
+      <tbody id="listings"></tbody></table>
+  </div>
+</section>
+
+<section id="assessor" class="view" hidden>
+  <div class="card"><h2 data-t="disputes">Disputes</h2><div id="disputes"></div></div>
+</section>
+
+<section class="card" id="ledgerCard" hidden>
+  <h2 data-t="ledger">Tamper-evident ledger</h2>
+  <button id="verify" class="ghost" data-t="verify">Verify whole chain</button> <span id="verifyOut"></span>
+  <div id="history"></div>
+</section>
+<script src="/static/i18n.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>
